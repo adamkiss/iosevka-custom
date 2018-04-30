@@ -2,12 +2,10 @@
 
 set -eux
 
-rm -fr ./iosevka-repo/dist/iosevka-custom
-
-family_name='Iosevka AK Mono'
-#weights='book' #testing onluy one weight
+family_name='Iosevka AK Expanded'
+# weights='book' #testing onluy one weight
 weights=''
-design='sans  ligset-coq'
+design='stress-fw sans ligset-coq'
 upright="ss09 \
 v-i-zshaped v-l-zshaped v-m-shortleg v-q-straight v-t-cross v-y-curly \
 v-zero-slashed v-three-flattop \
@@ -23,6 +21,7 @@ v-brace-straight v-dollar-through v-numbersign-slanted \
 v-at-long v-eszet-traditional"
 
 cd iosevka-repo
-make custom-config set='ak-mono' family="$family_name" \
+make custom-config set='ak-exp' family="$family_name" \
 	design="$design" upright="$upright" italic="$italic"
-make custom set='ak-mono'
+make custom set='ak-exp'
+cd ..
