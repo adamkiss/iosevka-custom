@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
 
-set -eu
+set -eux
 
-ln -fs ./iosevka-repo/dist/ dist/
-rm -fr ./dist/font-iosevka-ak && mkdir -p ./dist/font-iosevka-ak
+mkdir -p dist
 
-for f in ./dist/iosevka-ak-*/ttf/iosevka-*.ttf; do
+for f in iosevka-repo/dist/iosevka-ak-*/ttf/iosevka-*.ttf; do
 	case $f in
 		*oblique.ttf)
 			echo "skipping oblique file: $f";;
 		*)
-			filename=${f/.\/dist\/iosevka-ak-*\/ttf\/}
-			cp -f $f "dist/font-iosevka-ak/$filename";;
+			filename=${f/iosevka-repo\/dist\/iosevka-ak-*\/ttf\/}
+			cp -f $f "dist/$filename";;
 	esac
 done
 
-cp -fr dist/font-iosevka-ak '~/Library/Fonts/Iosevka AK'
+TARGET="$HOME/Library/Fonts/Iosevka AK"
+rm -fr "$TARGET"
+mkdir -p "$TARGET"
+cp -fr dist/* "$TARGET"

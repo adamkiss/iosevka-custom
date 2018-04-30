@@ -2,7 +2,7 @@
 
 set -eu
 
-. clone.sh
+# . clone.sh
 
 . gen-mono.sh
 . gen-exp.sh
