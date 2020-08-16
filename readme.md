@@ -1,6 +1,6 @@
 # Iosevka Custom
 
-🛑 This has been superseded by adamkiss/iosevka-custom - automated build using Github Actions. Use that, if you want.
+🛑 This has been superseded by [adamkiss/iosevka-ak](https://github.com/adamkiss/iosevka-ak) - automated build using Github Actions. Look there, if you want.
 
 Script for generation of custom style of [Iosevka][iosevka-repo] Font. Because `brew cask install font-iosevka` works well, but the font has so many options—it's just too hard to not want customised version.
 
