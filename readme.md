@@ -1,5 +1,7 @@
 # Iosevka Custom
 
+🛑 This has been superseded by adamkiss/iosevka-custom - automated build using Github Actions. Use that, if you want.
+
 Script for generation of custom style of [Iosevka][iosevka-repo] Font. Because `brew cask install font-iosevka` works well, but the font has so many options—it's just too hard to not want customised version.
 
 It will do a shallow clone of [Official Iosevka Repository][iosevka-repo], generate font files with [my preferred options](#font-options), and copy generated files to `~/Library/fonts/iosevka-ak`. Clone and copy steps can be commented out though, which I found particularly useful when trying out options :)
